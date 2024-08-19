@@ -1,0 +1,10 @@
+<div class="game-panel">
+  @for(attempt of [].constructor(numberOfAttempts); track $index){
+  <div class="word-row">
+    @for(letter of [].constructor(wordLength); track $index){
+      <div class="letter-box"></div>
+    }
+  </div>
+  }
+</div>
+<h3 style="text-align: center">{{ secretWord }}</h3>

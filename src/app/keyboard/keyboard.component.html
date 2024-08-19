@@ -1,0 +1,19 @@
+<div class="keyboard">
+  @for (row of keys; track row) {
+    <div class="row">
+      @for (key of row; track $index) {
+        @if (key === 'Enter') {
+          <p-button [label]="key" severity="secondary" (click)="onEnter()"
+                    [size]="width < 760 ? 'small' : 'large'"/>
+        } @else if (key === 'Back'){
+          <p-button icon="pi pi-arrow-left" severity="secondary" (click)="onBack()"
+                    [size]="width < 760 ? 'small' : 'large'"/>
+        }
+        @else {
+          <p-button [label]="key" severity="secondary" (click)="onKeyPress(key)"
+                    [size]="width < 760 ? 'small' : 'large'"/>
+        }
+      }
+    </div>
+  }
+</div>

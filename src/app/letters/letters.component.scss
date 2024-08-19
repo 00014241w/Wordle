@@ -1,0 +1,39 @@
+.game-panel{
+  padding: 25px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  .word-row{
+    display: flex;
+    gap: 6px;
+
+    .letter-box{
+      height: 50px;
+      width: 50px;
+      border-radius: 8px;
+      border: 3px solid #e4e4e4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      font-weight: bold;
+      color: #6a6a6a;
+    }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .game-panel {
+    gap: 8px;
+    .word-row{
+      gap: 8px;
+      .letter-box{
+        height: 56px;
+        width: 56px;
+      }
+    }
+  }
+}

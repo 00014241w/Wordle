@@ -1,0 +1,11 @@
+header {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e4e4;
+
+  div{
+    display: flex;
+    gap: 10px;
+  }
+}

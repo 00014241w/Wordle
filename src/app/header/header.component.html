@@ -1,0 +1,19 @@
+<header>
+  <div>
+    <p-button label="Wordle" severity="contrast"/>
+    <div class="card flex justify-content-center">
+      <p-button (onClick)="showDialog()" label="Give Up" severity="secondary" />
+      <p-dialog
+        header="You gave up!"
+        [(visible)]="visible"
+        [modal]="true"
+        [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+        [style]="{ width: '50vw' }"
+        [draggable]="false"
+        [resizable]="false">
+        <p>The secret word is:</p>
+      </p-dialog>
+    </div>
+  </div>
+  <p-button label="Log in" severity="contrast" [outlined]="true"/>
+</header>
