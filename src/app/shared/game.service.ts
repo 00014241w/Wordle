@@ -1,6 +1,6 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, Subject} from "rxjs";
+import {BehaviorSubject, map, Observable, Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +11,7 @@ export class GameService {
   secretWord = new BehaviorSubject<string>('');
 
 
-  getWord(){
-    this.http.get('https://random-word-api.herokuapp.com/word?length=5').subscribe(word =>{
-      this.secretWord.next(word.toString());
-    });
+  getWord(): Observable<string> {
+    return this.http.get<string[]>('https://random-word-api.herokuapp.com/word?length=5').pipe(map(word => word[0].toString()));
   }
 }

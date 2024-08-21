@@ -1,0 +1,24 @@
+.letter-box{
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  border: 3px solid #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #6a6a6a;
+}
+.letter-box.match{
+  background: #5ec35e;
+  color: white;
+}
+.letter-box.wrong-order{
+  background: #c6c631;
+  color: white;
+}
+.letter-box.miss{
+  background: #717171;
+  color: white;
+}

@@ -1,0 +1,6 @@
+<div class="game-board">
+  @for (letter of currentGuess; track $index){
+    <app-cell [letter]="letter"></app-cell>
+  }
+</div>
+<p style="text-align: center">{{secretWord}}</p>
